@@ -2655,10 +2655,11 @@
 		} );
 
 		// Add the 'enabled' class to the available routes
-		if( routes.left ) dom.controlsLeft.forEach( function( el ) { el.classList.add( 'enabled' );	} );
-		if( routes.right ) dom.controlsRight.forEach( function( el ) { el.classList.add( 'enabled' ); } );
-		if( routes.up ) dom.controlsUp.forEach( function( el ) { el.classList.add( 'enabled' );	} );
-		if( routes.down ) dom.controlsDown.forEach( function( el ) { el.classList.add( 'enabled' ); } );
+        // Reversed
+		if( routes.left ) dom.controlsUp.forEach( function( el ) { el.classList.add( 'enabled' );	} );
+		if( routes.right ) dom.controlsDown.forEach( function( el ) { el.classList.add( 'enabled' ); } );
+		if( routes.up ) dom.controlsLeft.forEach( function( el ) { el.classList.add( 'enabled' );	} );
+		if( routes.down ) dom.controlsRight.forEach( function( el ) { el.classList.add( 'enabled' ); } );
 
 		// Prev/next buttons
 		if( routes.left || routes.up ) dom.controlsPrev.forEach( function( el ) { el.classList.add( 'enabled' ); } );
@@ -4289,10 +4290,10 @@
 	/**
 	 * Event handler for navigation control buttons.
 	 */
-	function onNavigateLeftClicked( event ) { event.preventDefault(); onUserInput(); navigateLeft(); }
-	function onNavigateRightClicked( event ) { event.preventDefault(); onUserInput(); navigateRight(); }
-	function onNavigateUpClicked( event ) { event.preventDefault(); onUserInput(); navigateUp(); }
-	function onNavigateDownClicked( event ) { event.preventDefault(); onUserInput(); navigateDown(); }
+	function onNavigateLeftClicked( event ) { event.preventDefault(); onUserInput(); navigateUp();  }
+	function onNavigateRightClicked( event ) { event.preventDefault(); onUserInput(); navigateDown();  }
+	function onNavigateUpClicked( event ) { event.preventDefault(); onUserInput(); navigateLeft();  }
+	function onNavigateDownClicked( event ) { event.preventDefault(); onUserInput(); navigateRight();  }
 	function onNavigatePrevClicked( event ) { event.preventDefault(); onUserInput(); navigatePrev(); }
 	function onNavigateNextClicked( event ) { event.preventDefault(); onUserInput(); navigateNext(); }
 
