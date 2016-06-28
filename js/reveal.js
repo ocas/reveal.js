@@ -4153,19 +4153,24 @@
 
 				if( deltaX > touch.threshold && Math.abs( deltaX ) > Math.abs( deltaY ) ) {
 					touch.captured = true;
-					navigateLeft();
+                    //left
+                    navigateUp();
 				}
 				else if( deltaX < -touch.threshold && Math.abs( deltaX ) > Math.abs( deltaY ) ) {
 					touch.captured = true;
-					navigateRight();
+                    //right
+                    navigateDown();
 				}
 				else if( deltaY > touch.threshold ) {
 					touch.captured = true;
-					navigateUp();
+                    //up
+					navigateLeft();
 				}
 				else if( deltaY < -touch.threshold ) {
 					touch.captured = true;
-					navigateDown();
+                    //down
+                    navigateRight();
+					
 				}
 
 				// If we're embedded, only block touch events if they have
