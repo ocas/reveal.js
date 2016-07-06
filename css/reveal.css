@@ -8,7 +8,7 @@
 /*********************************************
  * RESET STYLES
  *********************************************/
-html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal iframe,
+html, body, .reveal span, .reveal applet, .reveal object, .reveal iframe,
 .reveal dl, .reveal dt, .reveal dd, .reveal ol, .reveal ul, .reveal li,
 .reveal fieldset, .reveal form, .reveal label, .reveal legend,
 .reveal table, .reveal caption, .reveal tbody, .reveal tfoot, .reveal thead, .reveal tr, .reveal th, .reveal td,
@@ -19,8 +19,6 @@ html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal i
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 .reveal article, .reveal aside, .reveal details, .reveal figcaption, .reveal figure,
@@ -54,8 +52,8 @@ html:-moz-full-screen-ancestor {
 .reveal .slides section .fragment {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .2s ease;
-          transition: all .2s ease; }
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
   .reveal .slides section .fragment.visible {
     opacity: 1;
     visibility: visible; }
@@ -1145,7 +1143,6 @@ html:-moz-full-screen-ancestor {
 .reveal .overlay .viewport {
   position: absolute;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   top: 40px;
